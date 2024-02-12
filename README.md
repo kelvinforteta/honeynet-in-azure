@@ -21,20 +21,20 @@ The architecture of the mini honeynet in Azure consists of the following compone
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
+- Virtual Machines (2 windows, 1 Linux)
 - Log Analytics Workspace
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+For the "BEFORE" metrics, all resources were originally deployed and exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://github.com/kelvinforteta/honeynet-in-azure/assets/53996412/396c108a-a5b2-405f-8899-75fe6103c8c1)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![Linux Syslog Auth Failures](https://github.com/kelvinforteta/honeynet-in-azure/assets/53996412/36afff81-f0aa-4cb8-b17b-02112cec6552)<br>
+![Windows RDP/SMB Auth Failures](https://github.com/kelvinforteta/honeynet-in-azure/assets/53996412/2d682372-177a-4e59-98ae-358495f2558a)<br>
 
 ## Metrics Before Hardening / Security Controls
 
